@@ -4,3 +4,5 @@ export type FormDataType = {
   senha: string,
   url: string,
 };
+
+export type FormDataTypeWithId = FormDataType & { id: string };

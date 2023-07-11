@@ -1,3 +1,11 @@
+.formContainer {
+  background: hsl(229, 15%, 14%);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
 .formCadSenha {
   display: flex;
   flex-direction: column;

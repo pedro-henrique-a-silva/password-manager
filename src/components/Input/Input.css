@@ -8,8 +8,11 @@
 .inputForm {
   background: hsl(229, 15%, 27%);
   border-radius: 10px;
+  color: white;
+  font-size: 19px;
   line-height: 53px;
   margin-top: 5px;
+  padding: 5px;
 }
 
 .largeInput {
