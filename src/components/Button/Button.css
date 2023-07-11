@@ -1,0 +1,20 @@
+.btnCadastrar {
+  background: hsl(212, 91%, 58%);
+  border-radius: 100px;
+  cursor: pointer;
+  line-height: 55px;
+  width: 211px;
+}
+
+.btnCancelar {
+  background-color: transparent;
+  border: none;
+  color: hsl(212, 91%, 58%);
+  cursor: pointer;
+  font-family: Roboto Times New Roman , Times , sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 211px;
+}

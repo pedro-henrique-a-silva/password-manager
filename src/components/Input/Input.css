@@ -1,0 +1,21 @@
+.labelInput {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.inputForm {
+  background: hsl(229, 15%, 27%);
+  border-radius: 10px;
+  line-height: 53px;
+  margin-top: 5px;
+}
+
+.largeInput {
+  width: 470px;
+}
+
+.smallInput {
+  width: 220px;
+}

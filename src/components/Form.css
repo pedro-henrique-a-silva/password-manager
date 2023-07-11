@@ -1,0 +1,19 @@
+.formCadSenha {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+}
+
+.formControl {
+  display: flex;
+  width: fit-content;
+}
+
+.fieldButtons {
+  justify-content: space-between;
+  width: 100%;
+}
+
+form p {
+  color: white;
+}
