@@ -23,7 +23,7 @@ function App() {
         />}
 
       {showForm
-      && (<main><Form handleShowForm={ handleShowForm } /></main>)}
+      && <main><Form handleShowForm={ handleShowForm } /></main>}
 
     </>
   );

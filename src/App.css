@@ -12,9 +12,11 @@ h1 {
 
 main {
   background: hsl(229, 15%, 14%);
-  border: 1px solid red;
   border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
   margin: auto;
   padding: 20px;
-  width: 51%;
+  width: 65%;
 }

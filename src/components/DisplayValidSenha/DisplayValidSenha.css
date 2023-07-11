@@ -1,0 +1,22 @@
+.validSenhaContainer {
+  align-items: center;
+  align-self: center;
+  background: #2d2f3a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 147px;
+  justify-content: center;
+  position: relative;
+  width: 309px;
+}
+
+.validSenhaContainer:after {
+  background: #2d2f3a;
+  content: '';
+  height: 50px;
+  left: -26px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 50px;
+}

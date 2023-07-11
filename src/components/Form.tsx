@@ -2,6 +2,7 @@ import { FormEventHandler, useState } from 'react';
 
 import Input from './Input/Input';
 import Button from './Button/Button';
+import DisplayValidSenha from './DisplayValidSenha/DisplayValidSenha';
 
 import { FormDataType } from './types';
 import './Form.css';
@@ -57,59 +58,63 @@ function Form(props: FormProps) {
   };
 
   return (
-    <form className="formCadSenha" onSubmit={ handleSubmit }>
-      <div className="formControl">
-        <Input
-          className="inputForm largeInput"
-          id="servico"
-          value={ formData.servico }
-          onChange={ handleChange }
-          label="Nome do Serviço"
-        />
-      </div>
-      <div className="formControl">
-        <Input
-          className="inputForm smallInput"
-          id="login"
-          value={ formData.login }
-          onChange={ handleChange }
-          label="Login"
-        />
-        <Input
-          type="password"
-          className="inputForm smallInput"
-          id="senha"
-          value={ formData.senha }
-          onChange={ handleChange }
-          label="Senha"
-        />
-      </div>
-      <div className="formControl">
-        <Input
-          className="inputForm largeInput"
-          id="url"
-          value={ formData.url }
-          onChange={ handleChange }
-          label="URL"
-        />
-      </div>
-      <p>* campos Obrigatorios</p>
-      <div className="formControl fieldButtons">
+    <>
+      <form className="formCadSenha" onSubmit={ handleSubmit }>
+        <div className="formControl">
+          <Input
+            className="inputForm largeInput"
+            id="servico"
+            value={ formData.servico }
+            onChange={ handleChange }
+            label="Nome do Serviço"
+          />
+        </div>
+        <div className="formControl">
+          <Input
+            className="inputForm smallInput"
+            id="login"
+            value={ formData.login }
+            onChange={ handleChange }
+            label="Login"
+          />
+          <Input
+            type="password"
+            className="inputForm smallInput"
+            id="senha"
+            value={ formData.senha }
+            onChange={ handleChange }
+            label="Senha"
+          />
+        </div>
+        <div className="formControl">
+          <Input
+            className="inputForm largeInput"
+            id="url"
+            value={ formData.url }
+            onChange={ handleChange }
+            label="URL"
+          />
+        </div>
+        <p>* campos Obrigatorios</p>
+        <div className="formControl fieldButtons">
 
-        <Button
-          label="Cancelar"
-          onClick={ () => handleShowForm(false) }
-          className="btnCancelar"
-        />
+          <Button
+            label="Cancelar"
+            onClick={ () => handleShowForm(false) }
+            className="btnCancelar"
+          />
 
-        <Button
-          label="Cadastrar"
-          className="btnCadastrar"
-          onClick={ () => alert('ola pessoas') }
-          disabled={ btnCadastrarEnable }
-        />
-      </div>
-    </form>
+          <Button
+            label="Cadastrar"
+            className="btnCadastrar"
+            onClick={ () => alert('ola pessoas') }
+            disabled={ btnCadastrarEnable }
+          />
+        </div>
+      </form>
+      <DisplayValidSenha formData={ formData } />
+    </>
+
   );
 }
 
