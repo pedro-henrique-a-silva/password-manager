@@ -1,9 +1,14 @@
 import { ButtonHTMLAttributes } from 'react';
 import './Button.css';
 
-function Button(props: ButtonHTMLAttributes<HTMLButtonElement>) {
+type ButtonProps = {
+  label: string
+} & ButtonHTMLAttributes<HTMLButtonElement>;
+
+function Button(props: ButtonProps) {
+  const { label } = props;
   return (
-    <button { ...props } />
+    <button { ...props }>{label}</button>
   );
 }
 

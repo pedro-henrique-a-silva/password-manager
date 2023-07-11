@@ -18,3 +18,14 @@
   line-height: normal;
   width: 211px;
 }
+
+
+.btnNovaSenha {
+  background: hsl(212, 91%, 58%);
+  border-radius: 100px;
+  cursor: pointer;
+  display: block;
+  line-height: 55px;
+  margin: auto;
+  width: 256px;
+}

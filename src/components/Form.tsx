@@ -2,7 +2,12 @@ import Input from './Input/Input';
 import Button from './Button/Button';
 import './Form.css';
 
-function Form() {
+type FormProps = {
+  handleShowForm: (show: boolean) => void
+};
+
+function Form(props: FormProps) {
+  const { handleShowForm } = props;
   return (
     <form className="formCadSenha">
       <div className="formControl">
@@ -34,10 +39,13 @@ function Form() {
       </div>
       <p>* campos Obrigatorios</p>
       <div className="formControl fieldButtons">
-        <Button className="btnCancelar">Cancelar</Button>
-        <Button className="btnCadastrar">Cadastrar</Button>
+        <Button
+          label="Cancelar"
+          onClick={ () => handleShowForm(false) }
+          className="btnCancelar"
+        />
+        <Button label="Cadastrar" className="btnCadastrar" />
       </div>
-
     </form>
   );
 }
