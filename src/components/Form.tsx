@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 
 import Input from './Input/Input';
 import Button from './Button/Button';
@@ -47,6 +48,16 @@ function Form(props: FormProps) {
     event.preventDefault();
     savePassword(formData);
     setFormData(INITIAL_FORM_VALUES);
+    Swal.fire({
+      title: 'Sucesso!',
+      text: 'Serviço cadastrado com sucesso',
+      icon: 'success',
+      timer: 1500,
+      background: '#323544',
+      showConfirmButton: false,
+      color: 'white',
+
+    });
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

@@ -9,45 +9,6 @@ import Button from './components/Button/Button';
 import { FormDataType, FormDataTypeWithId } from './components/types';
 import Input from './components/Input/Input';
 
-const listaTeste = [
-  {
-    servico: 'google',
-    login: 'biri',
-    senha: 'bsiri02$ddd',
-    url: 'www.googsle.com',
-  },
-  {
-    servico: 'google',
-    login: 'biri',
-    senha: 'bgisssri02$ddd',
-    url: 'www.goodgle.com',
-  },
-  {
-    servico: 'google',
-    login: 'biri',
-    senha: 'biasgri02$ddd',
-    url: 'www.goodgle.com',
-  },
-  {
-    servico: 'google',
-    login: 'biri',
-    senha: 'basirdfi02$ddd',
-    url: 'www.godogle.com',
-  },
-  {
-    servico: 'google',
-    login: 'biri',
-    senha: 'bsisri02$ddd',
-    url: 'www.goddogle.com',
-  },
-  {
-    servico: 'google',
-    login: 'biri',
-    senha: 'biri02$ddd',
-    url: 'www.goddogle.com',
-  },
-];
-
 function App() {
   const [showForm, setShowForm] = useState(false);
   const [hidePassword, setHidePassword] = useState(false);
