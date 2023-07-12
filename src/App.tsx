@@ -14,8 +14,8 @@ function App() {
   const [hidePassword, setHidePassword] = useState(false);
   const [passwordDataList, setPasswordData] = useState<FormDataTypeWithId[]>([]);
 
-  const handleShowForm = (show: boolean) => {
-    setShowForm(show);
+  const handleShowForm = () => {
+    setShowForm(!showForm);
   };
 
   const savePassword = (formData: FormDataType) => {
@@ -48,8 +48,8 @@ function App() {
 
       {!showForm
         && <Button
-          onClick={ () => handleShowForm(true) }
-          label="Cadastrar nova senhas"
+          onClick={ () => handleShowForm() }
+          label="Cadastrar nova senha"
           className="btnNovaSenha"
         />}
 

@@ -125,6 +125,7 @@ function Form(props: FormProps) {
 
           <Button
             label="Cancelar"
+            type="button"
             onClick={ () => handleShowForm(false) }
             className="btnCancelar"
           />
