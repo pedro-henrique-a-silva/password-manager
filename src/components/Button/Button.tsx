@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes } from 'react';
 import './Button.css';
 
 type ButtonProps = {
-  label: string
+  label: string,
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 function Button(props: ButtonProps) {

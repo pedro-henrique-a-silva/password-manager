@@ -1,11 +1,12 @@
 import React, { InputHTMLAttributes } from 'react';
+
 import './Input.css';
 
 type InputProps = {
   label: string,
 } & InputHTMLAttributes<HTMLInputElement>;
 
-function Input(props: InputProps) {
+function Input({ ...props }: InputProps) {
   const { id, label, type } = props;
   return (
     <label
@@ -16,6 +17,7 @@ function Input(props: InputProps) {
       {(type === 'checkbox')
         ? <input className="inputCheckbox" { ...props } />
         : <input type="text" { ...props } />}
+
     </label>
   );
 }

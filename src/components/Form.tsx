@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Input from './Input/Input';
 import Button from './Button/Button';
 import DisplayValidSenha from './DisplayValidSenha/DisplayValidSenha';
+import ShowPassword from './ShowPassword/ShowPassword';
 
 import { FormDataType } from './types';
 import './Form.css';
@@ -23,6 +24,9 @@ function Form(props: FormProps) {
   const { handleShowForm, savePassword } = props;
 
   const [btnCadastrarEnable, setBtnCadastrarEnable] = useState(true);
+
+  const [isPasswordVisible, setisPasswordVisible] = useState(false);
+
   const [formData, setFormData] = useState<FormDataType>(INITIAL_FORM_VALUES);
 
   function validarSenha(senha: string) {
@@ -54,6 +58,10 @@ function Form(props: FormProps) {
     });
   };
 
+  const showInputPassword = () => {
+    setisPasswordVisible(!isPasswordVisible);
+  };
+
   return (
     <section className="formContainer">
       <form className="formCadSenha" onSubmit={ handleSubmit }>
@@ -77,7 +85,7 @@ function Form(props: FormProps) {
             label="Login"
           />
           <Input
-            type="password"
+            type={ (!isPasswordVisible) ? 'password' : 'text' }
             className="inputForm smallInput"
             id="senha"
             value={ formData.senha }
@@ -85,6 +93,11 @@ function Form(props: FormProps) {
             onKeyUp={ () => validaForm() }
             label="Senha"
           />
+          <ShowPassword
+            isPasswordVisible={ isPasswordVisible }
+            showInputPassword={ showInputPassword }
+          />
+
         </div>
         <div className="formControl">
           <Input
