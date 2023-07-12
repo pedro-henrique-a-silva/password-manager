@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import './App.css';
+import PasswordList from './components/PasswordList/PasswordList';
 import Form from './components/Form';
 import Button from './components/Button/Button';
-import PasswordList from './components/PasswordList/PasswordList';
 
 import { FormDataType, FormDataTypeWithId } from './components/types';
+import Input from './components/Input/Input';
 
 const listaTeste = [
   {
@@ -49,6 +50,7 @@ const listaTeste = [
 
 function App() {
   const [showForm, setShowForm] = useState(false);
+  const [hidePassword, setHidePassword] = useState(false);
   const [passwordDataList, setPasswordData] = useState<FormDataTypeWithId[]>([]);
 
   const handleShowForm = (show: boolean) => {
@@ -72,24 +74,37 @@ function App() {
         .filter((passwordInfo) => passwordInfo.id !== passwordID),
     );
   };
+
+  const handleClick = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { checked } = event.target;
+    setHidePassword(checked);
+  };
   return (
     <>
       <header>
         <h1>Gerenciador de senhas</h1>
-
       </header>
+
       {!showForm
         && <Button
           onClick={ () => handleShowForm(true) }
           label="Cadastrar nova senhas"
           className="btnNovaSenha"
         />}
+
       <main>
         {showForm
       && <Form handleShowForm={ handleShowForm } savePassword={ savePassword } />}
+        <Input
+          type="checkbox"
+          label="Esconder Senhas"
+          checked={ hidePassword }
+          onChange={ handleClick }
+        />
         <PasswordList
           passwordDataList={ passwordDataList }
           handleDelete={ handleDelete }
+          hidePassword={ hidePassword }
         />
       </main>
 

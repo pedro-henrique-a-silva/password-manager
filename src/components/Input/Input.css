@@ -5,6 +5,45 @@
   padding: 10px;
 }
 
+.labelCheckbox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.inputCheckbox {
+  appearance: none;
+  background-color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  height: 20px;
+  margin: 0 5px;
+  position: relative;
+  transition: all 0.2s ease-in;
+  width: 40px;
+}
+
+.inputCheckbox:before {
+  background: hsl(212, 91%, 58%);
+  border-radius: 50%;
+  content: '';
+  height: 15px;
+  left: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in;
+  width: 15px;
+}
+
+.inputCheckbox:checked {
+  background: hsl(212, 91%, 58%);
+}
+
+.inputCheckbox:checked:before {
+  background: white;
+  left: 22px;
+}
+
 .inputForm {
   background: hsl(229, 15%, 27%);
   border-radius: 10px;

@@ -1,17 +1,21 @@
 import { BsFillLockFill, BsLink45Deg, BsTrash3Fill } from 'react-icons/bs';
 import { FormDataTypeWithId } from '../types';
 
-// BsFillLockFill
-
 import './PasswordList.css';
 
 type PasswordListProps = {
   passwordDataList: FormDataTypeWithId[],
   handleDelete: (passwordID: string) => void,
+  hidePassword: boolean
 };
 
 function PasswordList(props: PasswordListProps) {
-  const { passwordDataList, handleDelete } = props;
+  const { passwordDataList, hidePassword, handleDelete } = props;
+
+  const hidingPassword = (string: string) => {
+    return string.replace(/[a-zA-Z0-9!@#$%^&*()_+\-=[\]{};':"\\|,!.<>/?]/g, '*');
+  };
+
   return (
     <ul className="passwordListContainer">
       {(passwordDataList.length === 0)
@@ -37,7 +41,13 @@ function PasswordList(props: PasswordListProps) {
             <div>
               <span>Senha:</span>
               {' '}
-              <span>{passData.senha}</span>
+              <span>
+                {
+              (hidePassword)
+                ? hidingPassword(passData.senha)
+                : passData.senha
+                }
+              </span>
             </div>
             <div>
               <button

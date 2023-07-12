@@ -6,11 +6,16 @@ type InputProps = {
 } & InputHTMLAttributes<HTMLInputElement>;
 
 function Input(props: InputProps) {
-  const { id, label } = props;
+  const { id, label, type } = props;
   return (
-    <label className="labelInput" htmlFor={ id }>
+    <label
+      className={ (type === 'checkbox') ? 'labelCheckbox' : 'labelInput' }
+      htmlFor={ id }
+    >
       {label}
-      <input type="text" { ...props } />
+      {(type === 'checkbox')
+        ? <input className="inputCheckbox" { ...props } />
+        : <input type="text" { ...props } />}
     </label>
   );
 }
