@@ -1,33 +1,52 @@
-# Título do Projeto
+# Password Manager
 
-## Descrição
+Bem-vindo ao Gerenciador de Senhas Simplificado! Esta aplicação foi criada para tornar a gestão de suas senhas mais fácil e intuitiva. 
 
-Este repositório está em construção. Aqui você encontrará [breve resumo do projeto ou curso] e seus componentes.
+## O que esta aplicação oferece?
 
-## Conteúdo
+Este gerenciador de senhas permite que você:
 
-- [Instruções de Instalação](#instruções-de-instalação)
-- [Como Usar](#como-usar)
+- **Cadastre Novas Senhas:** Adicione facilmente novas senhas à sua lista, organizando-as de maneira conveniente.
 
-## Instruções de Instalação
+- **Edite Informações:** Atualize detalhes de suas senhas conforme necessário, garantindo que você tenha as informações mais recentes.
 
-Descreva aqui as instruções necessárias para configurar o ambiente de desenvolvimento e instalar quaisquer dependências.
+- **Exclua Senhas:** Remova entradas antigas ou desnecessárias com facilidade, mantendo sua lista limpa e organizada.
+
+- **Visualize Todas as Senhas:** Obtenha uma visão geral de todas as suas senhas cadastradas em um só lugar.
+
+
+## Tecnologias Utilizadas
+
+- **React e TypeScript:** Desenvolvi esta aplicação utilizando React e TypeScript para garantir um código mais robusto e fácil de manter.
+
+- **react-router-dom:** Implementei rotas no React para facilitar a navegação entre as diferentes funcionalidades da aplicação.
+
+- **CSS com Flexbox:** Utilizei Flexbox para estilizar a aplicação, garantindo um layout flexível e responsivo.
 
 ## Como Usar
 
-Explique como usar. Forneça exemplos de código, capturas de tela ou demonstrações.
+1. Clone este repositório em sua máquina local:
 
-## Contribuição
+   ```bash
+   git clone git@github.com:pedro-henrique-a-silva/password-manager.git
 
-Se você deseja contribuir para este projeto, siga estas etapas para contribuir:
+2. Navegue até o diretório do projeto:
 
-1. Crie um fork deste repositório.
-2. Crie um novo branch com um nome descritivo: `git checkout -b minha-contribuicao`
-3. Faça suas alterações e commit: `git commit -m "Adicionando minha contribuição"`
-4. Envie seu branch para o repositório: `git push origin minha-contribuicao`
-5. Abra um pull request neste repositório e aguarde o feedback.
+   ```bash
+   cd password-manager
 
-Lembre-se de que todas as contribuições são valorizadas e ajudam a tornar este projeto melhor para todos!
+3. Instale as dependências:
+   ```bash
+   npm install
+   
+4. Inicie a aplicação:
+   ```bash
+   npm run start
+5. Acesse a aplicação no navegador.
+6.dastre, edite, exclua ou visualize suas senhas conforme necessário.
 
-## Continue como desejar este Readme.md
-**Observação:** Este repositório está em construção e será atualizado regularmente. Sinta-se à vontade para adicionar mais seções conforme necessário para o seu projeto.
+**OBS**: é preciso ter o npm e o node instalados em sua maquina.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests para melhorarmos juntos.
