@@ -43,7 +43,7 @@ Este gerenciador de senhas permite que você:
    ```bash
    npm run start
 5. Acesse a aplicação no navegador.
-6.dastre, edite, exclua ou visualize suas senhas conforme necessário.
+6. dastre, edite, exclua ou visualize suas senhas conforme necessário.
 
 **OBS**: é preciso ter o npm e o node instalados em sua maquina.
 
